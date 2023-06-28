@@ -19,7 +19,21 @@ document.addEventListener('scroll', () => {
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
+		if (item.innerHTML == "Testar JS") {
+			console.log(item.innerHTML);
+			var print = testeJS("World");
+			console.log(print);
+		} else {
+			hamburger.classList.toggle('active');
+			mobile_menu.classList.toggle('active');
+		}
 	});
 });
+
+
+function testeJS(a){
+
+
+
+	return ("Hello " + a);
+}
