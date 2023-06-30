@@ -12,6 +12,7 @@ function testeJS(a){
 
 	// initialize array
 	var arrFundo = [];
+	var arrRepresentatividade = [];
 	var arrStatus = [];
 	// append new value to the array
 
@@ -23,6 +24,8 @@ function testeJS(a){
 		} else if(element=="Compra" || element=="Venda" || element=="Manutenção") {
 			arrStatus.push(element);
 			//console.log(element);
+		} else if(element.endsWith("%") && element.length<=6) {
+			arrRepresentatividade.push(element);
 		}
 	}
 	var arr = [];
@@ -31,6 +34,8 @@ function testeJS(a){
 		montadorDeLinha += arrFundo[i];
 		montadorDeLinha += ";";
 		montadorDeLinha += arrStatus[i];
+		montadorDeLinha += ";";
+		montadorDeLinha += arrRepresentatividade[i];
 		arr.push(montadorDeLinha);
 		montadorDeLinha = "";
 	}
