@@ -35,7 +35,7 @@ function testeJS(a){
 		montadorDeLinha += ";";
 		montadorDeLinha += arrStatus[i];
 		montadorDeLinha += ";";
-		montadorDeLinha += arrRepresentatividade[i];
+		montadorDeLinha += arrRepresentatividade[i].replace(",", ".");
 		arr.push(montadorDeLinha);
 		montadorDeLinha = "";
 	}
