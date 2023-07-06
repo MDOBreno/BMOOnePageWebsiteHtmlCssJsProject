@@ -6,6 +6,7 @@ function testeJS(a){
 	//window.open("https://www.youraddress.com","_self")
 	//window.location.href = "shortcuts://run-shortcut?name=[name]&input=[input]&text=[text]";
 	window.location.href = "shortcuts://run-shortcut?name=Add%20to%20Home%20Screen&input=text&text=goetta%20is%20great";
+	window.location.href = "shortcuts://run-shortcut?name=Adicionar%20%C3%A0%20Tela%20de%20In%C3%ADcio&input=text&text=goetta%20is%20great";
 
 	return ("Hello " + a);
 }
