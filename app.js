@@ -3,8 +3,9 @@
 
 
 function testeJS(a){
-
-
+	//window.open("https://www.youraddress.com","_self")
+	//window.location.href = "shortcuts://run-shortcut?name=[name]&input=[input]&text=[text]";
+	window.location.href = "shortcuts://run-shortcut?name=Add%20to%20Home%20Screen&input=text&text=goetta%20is%20great";
 
 	return ("Hello " + a);
 }

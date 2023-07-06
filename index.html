@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
   <link rel="stylesheet" href="style.css">
   <title>My Website</title>
 </head>
@@ -20,7 +20,6 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#testeJs" data-after="TesteJs">Testar JS</a></li>
           </ul>
         </div>
       </div>
@@ -33,10 +32,29 @@
   <section id="hero">
     <div class="hero container">
       <div>
+        <li><button onclick="changeColor()">JS do Html</button></li>
+        <li><button onclick="console.log(testeJS('World'));changeColor();">Testar JS</button></li>
+        <br/>
+        <br/>
+        <br/>
+        <h2 id="output">EXECUTOU JAVASCRIPT DO HTML</h2>
       </div>
     </div>
   </section>
   <!-- End Hero Section  -->
+
+  <script>
+        function changeColor() {
+            var outputLabel = document.getElementById('output');
+            var currentColor = outputLabel.style.color;
+
+            if (currentColor === 'red') {
+                outputLabel.style.color = 'blue';
+            } else {
+                outputLabel.style.color = 'red';
+            }
+        }
+    </script>
 
   <script src="./app.js"></script>
 </body>
