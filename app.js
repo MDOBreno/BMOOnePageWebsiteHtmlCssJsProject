@@ -9,22 +9,22 @@ function testeJS(a){
 	var minhaCarteria = "";
 
 
-	if (true) {				// Cenario carteirasSaoMesmoTamanho e carteirasSaoIdenticas
+	if (false) {				// Cenario carteirasSaoMesmoTamanho e carteirasSaoIdenticas
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-	} else if (false) { 		// Cenario carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
+	} else if (false) { 		// Cenario carteirasSaoMesmoTamanho e !carteirasSaoIdenticas [BARI11 != BREN11]
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BLMR11 BREN11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais>0
+	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais>0 [BARI11]
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando
+	} else if (true) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando [BARI11 e BLMR11]
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais<0
+	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais<0 [BARI11]
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo
+	} else if (false) { 		// Cenario !carteirasSaoMesmoTamanho e !carteirasSaoIdenticas e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo [BARI11 e BLMR11]
 		rodrigoCarteria = "HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	}
@@ -160,7 +160,7 @@ function testeJS(a){
 					}
 
 					//Verificacao se existe algum Fii apenas em arrayMeu que nao esta em arrayNovoMeu
-					var qtdAntigosFiisApenasMeus = (arrayMeu.length + novosFiisApenasDoRodrigo) - arrayRodrigo.length;
+					var qtdAntigosFiisApenasMeus = (arrayMeu.length + novosFiisApenasDoRodrigo.length) - arrayRodrigo.length
 					var antigosFiisApenasMeus = [];
 
 					if (qtdAntigosFiisApenasMeus > 0) {
@@ -192,6 +192,13 @@ function testeJS(a){
 					var s1;
 					var s2;
 					var s3;
+					var kTeste=0;
+					var str1Teste = "";
+					var str2Teste = "";
+					var str3Teste = "";
+					var s1Teste;
+					var s2Teste;
+					var s3Teste;
 					for (var i = 0; i < (arrayMeu.length); i++) {
 						if (k<novosFiisApenasDoRodrigo.length) {
 							str2 = novosFiisApenasDoRodrigo[k];
@@ -230,6 +237,57 @@ function testeJS(a){
 						    if (retorno) {
 								arrayNovoMeu.push("(-)");
 								k = k + 1;
+
+								kTeste = 0;
+								str1Teste = novosFiisApenasDoRodrigo[(k-1)+kTeste];
+								for (var iTeste = (i+1); iTeste < (arrayMeu.length); iTeste++) {
+									if ((k + kTeste)<novosFiisApenasDoRodrigo.length) {
+										str2Teste = novosFiisApenasDoRodrigo[(k + kTeste)];
+										str3Teste = arrayMeu[iTeste];
+
+										s1Teste=str1Teste.toLowerCase().split("");
+									    s2Teste=str2Teste.toLowerCase().split("");
+									    s3Teste=str3Teste.toLowerCase().split("");
+									    var min = 4;//Math.min(...[s1.length, s2.length, s3.length]);
+
+									    var s1EstaNaOrdemTeste = false;
+									    var s3EstaNaOrdemTeste = false;
+									    var retornoTeste = true;
+									    for(var jTeste=0; jTeste<min; jTeste++) {
+									    	if (s1EstaNaOrdemTeste && s3EstaNaOrdemTeste) {
+									    		retornoTeste = true;
+									    		break;
+									    	}
+									        if ((s1Teste[jTeste] > s2Teste[jTeste]) && !s1EstaNaOrdemTeste) {
+									    		retornoTeste = false;
+									    		break;
+									    	}
+									    	if ((s2Teste[jTeste] > s3Teste[jTeste]) && !s3EstaNaOrdemTeste) {
+									    		retornoTeste = false;
+									    		break;
+									    	}
+									    	if (s1Teste[jTeste] != s2Teste[jTeste]) {
+									    		s1EstaNaOrdemTeste = true;
+									    	}
+									    	if (s2Teste[jTeste] != s3Teste[jTeste]) {
+									    		s3EstaNaOrdemTeste = true;
+									    	}
+									    }
+										if (!retornoTeste) {
+											break;
+										}
+										kTeste = kTeste + 1;
+										str1Teste = novosFiisApenasDoRodrigo[(k-1)+kTeste];
+									}
+								}
+								if (kTeste>0) {
+									for(var j=0; j<kTeste; j++) {
+										//TODO: Faz os tratamentos de adicao dos demais Fiis consecutivo
+										arrayNovoMeu.push("(-)");
+									}
+									k = k + kTeste;
+									kTeste = 0;
+								}
 						    }
 						}
 					    arrayNovoMeu.push(arrayMeu[i]);
@@ -313,14 +371,14 @@ function testeJS(a){
 
 
 
-	// console.log(orderedWords("AFHI11", "BARI11", "BLMR11"));
-	// console.log(orderedWords("BARI11", "AFHI11", "BLMR11"));
-	// console.log(orderedWords("AFHI11", "BLMR11", "BARI11"));
+	// console.log(areWordsOrdered("AFHI11", "BARI11", "BLMR11"));
+	// console.log(areWordsOrdered("BARI11", "AFHI11", "BLMR11"));
+	// console.log(areWordsOrdered("AFHI11", "BLMR11", "BARI11"));
 
 	return (arrayRodrigo.join("\r\n"));
 }
 
-function orderedWords(str1, str2, str3) {
+function areWordsOrdered(str1, str2, str3) {
     var s1=str1.toLowerCase().split("");
     var s2=str2.toLowerCase().split("");
     var s3=str3.toLowerCase().split("");
