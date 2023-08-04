@@ -21,12 +21,12 @@ function testeJS(a){
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	//idem
-	// OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11] [(-);BREN11] [BROF11;(-)] [BTLG11;(-)]
+	// OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
 	} else if (true) { 		
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	//idem
-	// OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]  BREN11 BTLG11 [BROF11;(-)]
+	// OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
 	} else if (false) { 		
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
@@ -159,6 +159,26 @@ function testeJS(a){
 			for (var i = 0; i < arrayRodrigo.length; i++) {
 				tempArrayRodrigo.push((arrayRodrigo[i].split(";")[0]));
 			}
+
+			//Criando arrayComTodosOsFiisOrdenados para ordenacao no final
+			var arrayComTodosOsFiisOrdenados = [];
+			for (var i = 0; i < arrayMeu.length; i++) {
+				arrayComTodosOsFiisOrdenados.push(arrayMeu[i]);
+			}
+			for (var i = 0; i<tempArrayRodrigo.length; i++) {
+				var esseFiiFoiCompradoPelaPrimeiraVez = true;
+				for(var j=0; j<arrayComTodosOsFiisOrdenados.length; j++) {
+					if (tempArrayRodrigo[i]==arrayComTodosOsFiisOrdenados[j]) {
+						esseFiiFoiCompradoPelaPrimeiraVez = false;
+						break;
+					}
+				}
+				if (esseFiiFoiCompradoPelaPrimeiraVez) {
+					arrayComTodosOsFiisOrdenados.push((tempArrayRodrigo[i]));
+				}
+			}
+			arrayComTodosOsFiisOrdenados = arrayComTodosOsFiisOrdenados.sort();
+
 
 			//Rodrigo vendeu e comprou X fundos ->               V = C
 			if(carteirasSaoMesmoTamanho) {
@@ -507,7 +527,15 @@ function testeJS(a){
 				montadorDeLinha = "";
 			}
 		}
-		arrayRodrigo = arrayComAsDuasCarteiras;
+
+		arrayRodrigo = [];
+		for (var i = 0; i<arrayComTodosOsFiisOrdenados.length; i++) {
+			for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
+				if ( (arrayComTodosOsFiisOrdenados[i]==(arrayComAsDuasCarteiras[j].split(";")[0])) || (arrayComTodosOsFiisOrdenados[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) ) {
+					arrayRodrigo.push(arrayComAsDuasCarteiras[j]);
+				}
+			}
+		}
 	}
 	
 
