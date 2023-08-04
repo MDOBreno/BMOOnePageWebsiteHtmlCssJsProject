@@ -21,13 +21,13 @@ function testeJS(a){
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	//idem
-	// [BUG Falsa venda do BROF11] Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
-	} else if (false) { 		
+	// OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11] [(-);BREN11] [BROF11;(-)] [BTLG11;(-)]
+	} else if (true) { 		
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	//idem
-	// [BUG Falsa venda do BROF11] Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
-	} else if (true) { 		
+	// OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]  BREN11 BTLG11 [BROF11;(-)]
+	} else if (false) { 		
 		rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
 		minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 	//idem
@@ -155,6 +155,11 @@ function testeJS(a){
 		if (!carteirasSaoIdenticas) {
 			var montadorDeLinha = "";
 
+			var tempArrayRodrigo = [];
+			for (var i = 0; i < arrayRodrigo.length; i++) {
+				tempArrayRodrigo.push((arrayRodrigo[i].split(";")[0]));
+			}
+
 			//Rodrigo vendeu e comprou X fundos ->               V = C
 			if(carteirasSaoMesmoTamanho) {
 
@@ -169,103 +174,110 @@ function testeJS(a){
 						montadorDeLinha = "";
 
 					} else {
-						//Verificacao se ele vendeu arrayMeu[i] e arrayRodrigo[i] eh um novo Fii que ele comprou
-						if ( !((arrayMeu).find(element => element==(arrayRodrigo[i].split(";")[0]))) && !((arrayRodrigo).find(element => element==(arrayMeu[i])))) {
-							var str1 = "AAAA11";
-							var str2 = (arrayRodrigo[i].split(";")[0]);
-							var str3 = (arrayMeu[i]);
-							var s1;
-							var s2;
-							var s3;
 
-							s1=str1.toLowerCase().split("");
-						    s2=str2.toLowerCase().split("");
-						    s3=str3.toLowerCase().split("");
-						    var min = 4;//Math.min(...[s1.length, s2.length, s3.length]);
+						//Verifica se rodrigoVendeuMeuFiiAntigo
+						var arrayRodrigoDoArrayMeu = "";
+						var rodrigoVendeuMeuFiiAntigo = true;
+						for(var j=0; j<tempArrayRodrigo.length; j++) {
+							if (arrayMeu[i]==tempArrayRodrigo[j]) {
+								rodrigoVendeuMeuFiiAntigo = false;
+								arrayRodrigoDoArrayMeu = arrayRodrigo[j];
+								break;
+							}
+						}
+						//Verifica se rodrigoComprouUmNovoFiiPelaPrimeraVez
+						var rodrigoComprouUmNovoFiiPelaPrimeraVez = true;
+						for(var j=0; j<arrayMeu.length; j++) {
+							if (tempArrayRodrigo[i]==arrayMeu[j]) {
+								rodrigoComprouUmNovoFiiPelaPrimeraVez = false;
+								break;
+							}
+						}
 
-						    var s1EstaNaOrdem = false;
-						    var s3EstaNaOrdem = false;
-						    var fiiDoRodrigoEhAlfabeticamenteAntes = true;
-						    for(var j=0; j<min; j++) {
-						    	if (s1EstaNaOrdem && s3EstaNaOrdem) {
-						    		retorno = true;
-						    		break;
-						    	}
-						        if ((s1[j] > s2[j]) && !s1EstaNaOrdem) {
-						    		retorno = false;
-						    		break;
-						    	}
-						    	if ((s2[j] > s3[j]) && !s3EstaNaOrdem) {
-						    		retorno = false;
-						    		break;
-						    	}
-						    	if (s1[j] != s2[j]) {
-						    		s1EstaNaOrdem = true;
-						    	}
-						    	if (s2[j] != s3[j]) {
-						    		s3EstaNaOrdem = true;
-						    	}
-						    }
 
-							if (fiiDoRodrigoEhAlfabeticamenteAntes) {
-								//Insere o da minha carteira primeiro
+						//Verifica se arrayMeu[i] ja foi inserido no arrayComAsDuasCarteiras
+						var meuFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
+						for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
+							if (arrayMeu[i]==(arrayComAsDuasCarteiras[j].split(";")[0]) || arrayMeu[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) {
+								meuFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
+								break;
+							}
+						}
+						//Verifica se arrayRodrigo[i] ja foi inserido no arrayComAsDuasCarteiras
+						var rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
+						for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
+							if (tempArrayRodrigo[i]==(arrayComAsDuasCarteiras[j].split(";")[0]) || tempArrayRodrigo[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) {
+								rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
+								break;
+							}
+						}
+
+
+						//Verificacao se rodrigoVendeuMeuFiiAntigo arrayMeu[i] e rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
+						if ( rodrigoVendeuMeuFiiAntigo && rodrigoComprouUmNovoFiiPelaPrimeraVez) {
+							if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
 								montadorDeLinha += "(-)";
 								montadorDeLinha += ";";
 								montadorDeLinha += arrayRodrigo[i];
 								arrayComAsDuasCarteiras.push(montadorDeLinha);
 								montadorDeLinha = "";
-
-								// e agora insere o do Rodrigo
-								montadorDeLinha += arrayMeu[i];
-								montadorDeLinha += ";";
-								montadorDeLinha += "(-)";
-								montadorDeLinha += ";";
-								montadorDeLinha += "Venda";
-								montadorDeLinha += ";";
-								montadorDeLinha += "0.00%";
-								arrayComAsDuasCarteiras.push(montadorDeLinha);
-								montadorDeLinha = "";
-
-							} else {
-								//Insere o do Rodrigo primeiro
-								montadorDeLinha += "(-)";
-								montadorDeLinha += ";";
-								montadorDeLinha += arrayRodrigo[i];
-								arrayComAsDuasCarteiras.push(montadorDeLinha);
-								montadorDeLinha = "";
-
-								// e agora insere o da minha carteira
-								montadorDeLinha += arrayMeu[i];
-								montadorDeLinha += ";";
-								montadorDeLinha += "(-)";
-								montadorDeLinha += ";";
-								montadorDeLinha += "Venda";
-								montadorDeLinha += ";";
-								montadorDeLinha += "0.00%";
-								arrayComAsDuasCarteiras.push(montadorDeLinha);
-								montadorDeLinha = "";
-
 							}
 
-						//Verificacao se ele vendeu arrayMeu[i]
-						} else if ((arrayMeu).find(element => element==(arrayRodrigo[i].split(";")[0]))) {
-							montadorDeLinha += arrayMeu[i];
-							montadorDeLinha += ";";
-							montadorDeLinha += "(-)";
-							montadorDeLinha += ";";
-							montadorDeLinha += "Venda";
-							montadorDeLinha += ";";
-							montadorDeLinha += "0.00%";
-							arrayComAsDuasCarteiras.push(montadorDeLinha);
-							montadorDeLinha = "";
+							if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+								montadorDeLinha += arrayMeu[i];
+								montadorDeLinha += ";";
+								montadorDeLinha += "(-)";
+								montadorDeLinha += ";";
+								montadorDeLinha += "Venda";
+								montadorDeLinha += ";";
+								montadorDeLinha += "0.00%";
+								arrayComAsDuasCarteiras.push(montadorDeLinha);
+								montadorDeLinha = "";
+							}
 
-						//se nao, entao ele comprou o novo arrayRodrigo[i]
+						//se nao foi isso, mas rodrigoVendeuMeuFiiAntigo arrayMeu[i]
+						} else if (rodrigoVendeuMeuFiiAntigo) {
+							if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+								montadorDeLinha += arrayMeu[i];
+								montadorDeLinha += ";";
+								montadorDeLinha += "(-)";
+								montadorDeLinha += ";";
+								montadorDeLinha += "Venda";
+								montadorDeLinha += ";";
+								montadorDeLinha += "0.00%";
+								arrayComAsDuasCarteiras.push(montadorDeLinha);
+								montadorDeLinha = "";
+							}
+
+							// Nesse instante !rodrigoComprouUmNovoFiiPelaPrimeraVez , entao
+							if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+								montadorDeLinha += tempArrayRodrigo[i];
+								montadorDeLinha += ";";
+								montadorDeLinha += arrayRodrigo[i];
+								arrayComAsDuasCarteiras.push(montadorDeLinha);
+								montadorDeLinha = "";
+							}
+
+
+
+						//se nao foi isso, entao rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
 						} else {
-							montadorDeLinha += "(-)";
-							montadorDeLinha += ";";
-							montadorDeLinha += arrayRodrigo[i];
-							arrayComAsDuasCarteiras.push(montadorDeLinha);
-							montadorDeLinha = "";
+							if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+								montadorDeLinha += "(-)";
+								montadorDeLinha += ";";
+								montadorDeLinha += arrayRodrigo[i];
+								arrayComAsDuasCarteiras.push(montadorDeLinha);
+								montadorDeLinha = "";
+							}
+
+							// Nesse instante !rodrigoVendeuMeuFiiAntigo , entao
+							if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+								montadorDeLinha += arrayMeu[i];
+								montadorDeLinha += ";";
+								montadorDeLinha += arrayRodrigoDoArrayMeu;
+								arrayComAsDuasCarteiras.push(montadorDeLinha);
+								montadorDeLinha = "";
+							}
 
 						}
 					}
@@ -273,11 +285,6 @@ function testeJS(a){
 
 			} else {
 				var rodrigoCarteriaTemFundosAMais = (arrayRodrigo.length) - (arrayMeu.length);
-
-				var tempArrayRodrigo = [];
-				for (var i = 0; i < arrayRodrigo.length; i++) {
-					tempArrayRodrigo.push((arrayRodrigo[i].split(";")[0]));
-				}
 
 				//Rodrigo Vendeu menos fundos do que Comprou ->  V < C
 				if (rodrigoCarteriaTemFundosAMais > 0) {
