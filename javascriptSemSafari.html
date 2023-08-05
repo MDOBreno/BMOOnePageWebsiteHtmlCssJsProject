@@ -1,535 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <textarea name="" rows="2" cols="20" id="myClipboardInput" class="textbox">"Área de Transferência"</textarea>
-    
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <button onclick = "document.body.innerHTML = runMyJavaScript();" > TesteJS muda Body</button>
+        <br />
+        <button onclick = "runMyJavaScript()" > TesteJS Debug</button>
+        <br />
+        <textarea name="" rows="2" cols="20" id="myClipboardInput" class="textbox" style="margin: 0px;width: 1260px;height: 103px;">"Área de Transferência"</textarea>
+        
+    </head>
+<body style="background-color: rgb(53,64,74);">
     <script>
-        function runMyJavaScript() {
+            function runMyJavaScript() {
 
-            var rodrigoCarteria = document.getElementById("myClipboardInput").textContent.replace("\r\n", " ");
-            var minhaCarteria = "Arquivo";
-
-
-    //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
-    // OK Cenario 
-    if (false) {                
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    
-
-    //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
-    // OK Cenario  umParDeFiisDiferentes[BLMR11!=BREN11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  e doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BRE111 BRE211 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    
-
-    //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
-    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    //idem
-    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]
-    } else if (false) {         
-        rodrigoCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-    }
+                var rodrigoCarteria = document.getElementById("myClipboardInput").textContent.split("\n").join(" ");
+                var minhaCarteria = "Arquivo";
 
 
-
-// Obter todos os links da página
-var array = rodrigoCarteria.split(" ");
-var arrayMeu = minhaCarteria.split(" ");
-
-// initialize arraysRodrigo
-var arrFundo = [];
-var arrRepresentatividade = [];
-var arrStatus = [];
-// append new value to the arraysRodrigo
+                //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
+                // OK Cenario 
+                if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 
 
-for (let element of array) {
-  if(element.endsWith("11") && element.length==6) {
-    arrFundo.push(element);
-    //console.log(element);
-  } else if(element=="Compra" || element=="Venda" || element=="Manutenção") {
-    if (element=="Manutenção") {
-      arrStatus.push("Manutencao");
-    } else {
-      arrStatus.push(element);
-    }
-    //console.log(element);
-  } else if(element.endsWith("%") && element.length<=6) {
-    arrRepresentatividade.push(element);
-  }
-}
-var arr = [];
-var montadorDeLinha = "";
-for (var i = 0; i < arrFundo.length; i++) {
-  montadorDeLinha += arrFundo[i];
-  montadorDeLinha += ";";
-  montadorDeLinha += arrStatus[i];
-  montadorDeLinha += ";";
-  montadorDeLinha += arrRepresentatividade[i].replace(",", ".");
-  arr.push(montadorDeLinha);
-  montadorDeLinha = "";
-}
-var arrayRodrigo = arr.sort();
-//console.log(arr);
-// Chamar preenchimento para concluir
-//completion(arrayRodrigo.join("\r\n"));
+                    //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
+                    // OK Cenario  umParDeFiisDiferentes[BLMR11!=BREN11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  e doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BRE111 BRE211 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 
 
-if (arrayMeu.length!=0) {
-  //Verificacao se sao do mesmo tamanho
-  var carteirasSaoMesmoTamanho = (arrayRodrigo.length)==(arrayMeu.length);
-
-  //Verificacao se sao identicas
-  var carteirasSaoIdenticas = false;
-  if (carteirasSaoMesmoTamanho) {
-    carteirasSaoIdenticas = true;
-    for (var i = 0; i < arrayRodrigo.length; i++) {
-      if ((arrayRodrigo[i].split(";")[0])!=arrayMeu[i]) {
-        carteirasSaoIdenticas = false;
-        break;
-      }
-    }
-  }
-
-  //Criacao de array comparativo com as duas carteiras
-  var arrayComAsDuasCarteiras = [];
-  if (!carteirasSaoIdenticas) {
-    var montadorDeLinha = "";
-
-    var tempArrayRodrigo = [];
-    for (var i = 0; i < arrayRodrigo.length; i++) {
-      tempArrayRodrigo.push((arrayRodrigo[i].split(";")[0]));
-    }
-
-    //Criando arrayComTodosOsFiisOrdenados para ordenacao no final
-    var arrayComTodosOsFiisOrdenados = [];
-    for (var i = 0; i < arrayMeu.length; i++) {
-      arrayComTodosOsFiisOrdenados.push(arrayMeu[i]);
-    }
-    for (var i = 0; i<tempArrayRodrigo.length; i++) {
-      var esseFiiFoiCompradoPelaPrimeiraVez = true;
-      for(var j=0; j<arrayComTodosOsFiisOrdenados.length; j++) {
-        if (tempArrayRodrigo[i]==arrayComTodosOsFiisOrdenados[j]) {
-          esseFiiFoiCompradoPelaPrimeiraVez = false;
-          break;
-        }
-      }
-      if (esseFiiFoiCompradoPelaPrimeiraVez) {
-        arrayComTodosOsFiisOrdenados.push((tempArrayRodrigo[i]));
-      }
-    }
-    arrayComTodosOsFiisOrdenados = arrayComTodosOsFiisOrdenados.sort();
+                    //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
+                    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                    //idem
+                    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]
+                } else if (false) {
+                    rodrigoCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
 
 
-    //Rodrigo vendeu e comprou X fundos ->               V = C
-    if(carteirasSaoMesmoTamanho) {
-
-      for (var i = 0; i < arrayRodrigo.length; i++) {
-
-        //Verificacao se eh um fundo que existia e continua na carteira
-        if (arrayMeu[i]==(arrayRodrigo[i].split(";")[0])) {
-          montadorDeLinha += arrayMeu[i];
-          montadorDeLinha += ";";
-          montadorDeLinha += arrayRodrigo[i];
-          arrayComAsDuasCarteiras.push(montadorDeLinha);
-          montadorDeLinha = "";
-
-        } else {
-
-          //Verifica se rodrigoVendeuMeuFiiAntigo
-          var arrayRodrigoDoArrayMeu = "";
-          var rodrigoVendeuMeuFiiAntigo = true;
-          for(var j=0; j<tempArrayRodrigo.length; j++) {
-            if (arrayMeu[i]==tempArrayRodrigo[j]) {
-              rodrigoVendeuMeuFiiAntigo = false;
-              arrayRodrigoDoArrayMeu = arrayRodrigo[j];
-              break;
-            }
-          }
-          //Verifica se rodrigoComprouUmNovoFiiPelaPrimeraVez
-          var rodrigoComprouUmNovoFiiPelaPrimeraVez = true;
-          for(var j=0; j<arrayMeu.length; j++) {
-            if (tempArrayRodrigo[i]==arrayMeu[j]) {
-              rodrigoComprouUmNovoFiiPelaPrimeraVez = false;
-              break;
-            }
-          }
-
-
-          //Verifica se arrayMeu[i] ja foi inserido no arrayComAsDuasCarteiras
-          var meuFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
-          for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
-            if (arrayMeu[i]==(arrayComAsDuasCarteiras[j].split(";")[0]) || arrayMeu[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) {
-              meuFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
-              break;
-            }
-          }
-          //Verifica se arrayRodrigo[i] ja foi inserido no arrayComAsDuasCarteiras
-          var rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
-          for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
-            if (tempArrayRodrigo[i]==(arrayComAsDuasCarteiras[j].split(";")[0]) || tempArrayRodrigo[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) {
-              rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
-              break;
-            }
-          }
-
-
-          //Verificacao se rodrigoVendeuMeuFiiAntigo arrayMeu[i] e rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
-          if ( rodrigoVendeuMeuFiiAntigo && rodrigoComprouUmNovoFiiPelaPrimeraVez) {
-            if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += "(-)";
-              montadorDeLinha += ";";
-              montadorDeLinha += arrayRodrigo[i];
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-            if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += arrayMeu[i];
-              montadorDeLinha += ";";
-              montadorDeLinha += "(-)";
-              montadorDeLinha += ";";
-              montadorDeLinha += "Venda";
-              montadorDeLinha += ";";
-              montadorDeLinha += "0.00%";
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-          //se nao foi isso, mas rodrigoVendeuMeuFiiAntigo arrayMeu[i]
-          } else if (rodrigoVendeuMeuFiiAntigo) {
-            if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += arrayMeu[i];
-              montadorDeLinha += ";";
-              montadorDeLinha += "(-)";
-              montadorDeLinha += ";";
-              montadorDeLinha += "Venda";
-              montadorDeLinha += ";";
-              montadorDeLinha += "0.00%";
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-            // Nesse instante !rodrigoComprouUmNovoFiiPelaPrimeraVez , entao
-            if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += tempArrayRodrigo[i];
-              montadorDeLinha += ";";
-              montadorDeLinha += arrayRodrigo[i];
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-
-
-          //se nao foi isso, entao rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
-          } else {
-            if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += "(-)";
-              montadorDeLinha += ";";
-              montadorDeLinha += arrayRodrigo[i];
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-            // Nesse instante !rodrigoVendeuMeuFiiAntigo , entao
-            if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
-              montadorDeLinha += arrayMeu[i];
-              montadorDeLinha += ";";
-              montadorDeLinha += arrayRodrigoDoArrayMeu;
-              arrayComAsDuasCarteiras.push(montadorDeLinha);
-              montadorDeLinha = "";
-            }
-
-          }
-        }
-      }
-
-    } else {
-      var rodrigoCarteriaTemFundosAMais = (arrayRodrigo.length) - (arrayMeu.length);
-
-      //Rodrigo Vendeu menos fundos do que Comprou ->  V < C
-      if (rodrigoCarteriaTemFundosAMais > 0) {
-        var novosFiisApenasDoRodrigo = [];
-        var arrayNovoMeu = [];
-        for (var i = 0; i < arrayRodrigo.length; i++) {
-          if ((arrayRodrigo[i].split(";")[0]) != "(-)") {
-            if ((arrayMeu).find(element => element==(arrayRodrigo[i].split(";")[0]))) {
-              //arrayNovoMeu.push(arrayRodrigo[i].split(";")[0])
-            } else {
-              //arrayNovoMeu.push("(-)");
-              novosFiisApenasDoRodrigo.push((arrayRodrigo[i].split(";")[0]));
-            }
-          }
-        }
-
-        //Verificacao se existe algum Fii apenas em arrayMeu que nao esta em arrayNovoMeu
-        var qtdAntigosFiisApenasMeus = (arrayMeu.length + novosFiisApenasDoRodrigo.length) - arrayRodrigo.length
-        var antigosFiisApenasMeus = [];
-
-        if (qtdAntigosFiisApenasMeus > 0) {
-          for (var i = 0; i < arrayMeu.length; i++) {
-            if (!(tempArrayRodrigo).find(element => element==(arrayMeu[i]))) {
-              antigosFiisApenasMeus.push(arrayMeu[i]);
-            }
-          }
-        }
-
-        //Inserir antigosFiisApenasMeus no arrayRodrigo e em seguida dar um sort() nele
-        for (var i = 0; i < antigosFiisApenasMeus.length; i++) {
-          montadorDeLinha += antigosFiisApenasMeus[i];
-          montadorDeLinha += ";";
-          montadorDeLinha += "Venda";
-          montadorDeLinha += ";";
-          montadorDeLinha += "0.00%";
-          arrayNovoRodrigo.push(montadorDeLinha);
-          montadorDeLinha = "";
-        }
-        arrayRodrigo.sort()
-
-        //Ordenacao eh para poder inserir novosFiisApenasDoRodrigo no arrayMeu
-        novosFiisApenasDoRodrigo = novosFiisApenasDoRodrigo.sort();
-        var k=0; //iterador em [novosFiisApenasDoRodrigo]
-        var str1 = "AAAA11";
-        var str2 = "";
-        var str3 = "";
-        var s1;
-        var s2;
-        var s3;
-        var kTeste=0;
-        var str1Teste = "";
-        var str2Teste = "";
-        var str3Teste = "";
-        var s1Teste;
-        var s2Teste;
-        var s3Teste;
-        for (var i = 0; i < (arrayMeu.length); i++) {
-          if (k<novosFiisApenasDoRodrigo.length) {
-            str2 = novosFiisApenasDoRodrigo[k];
-            str3 = arrayMeu[i];
-
-            s1=str1.toLowerCase().split("");
-              s2=str2.toLowerCase().split("");
-              s3=str3.toLowerCase().split("");
-              var min = 4;//Math.min(...[s1.length, s2.length, s3.length]);
-
-              var s1EstaNaOrdem = false;
-              var s3EstaNaOrdem = false;
-              var retorno = true;
-              for(var j=0; j<min; j++) {
-                if (s1EstaNaOrdem && s3EstaNaOrdem) {
-                  retorno = true;
-                  break;
+                    //Cenario Doido
+                    // [BUG printa ARQ111 e ARQ211 e um monte de BARI11] 
+                } else if (false) {
+                    rodrigoCarteria = "2,32% Manutenção 3,03% Compra 3,51% Compra 3,60% Compra 3,42% Compra 3,30% Compra 3,60% Compra 3,05% Compra 3,60% Compra 3,65% Compra 5,92% Compra 2,60% Compra 4,95% Compra 3,96% Manutenção 2,63% Manutenção 4,46% Compra 3,60% Compra 4,47% Compra 3,39% Compra 3,58% Compra 4,33% Compra 4,31% Compra 5,24% Compra 5,26% Compra 6,57% Compra 1,67% Manutenção 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 10/11/20 21/5/23 22/08/21 16/08/20 25/09/22 19/01/20 12/04/20 23/08/20 21/12/20 08/08/21 24/04/21 20/02/22 14/08/22 06/06/21 19/01/20 20/12/20 08/01/23 23/04/23 01/05/23 19/01/20 05/07/20 19/01/20 14/5/23 24/7/22 19/01/20 LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11";
+                    minhaCarteria = "ARQ111 ARQ211";
                 }
-                  if ((s1[j] > s2[j]) && !s1EstaNaOrdem) {
-                  retorno = false;
-                  break;
-                }
-                if ((s2[j] > s3[j]) && !s3EstaNaOrdem) {
-                  retorno = false;
-                  break;
-                }
-                if (s1[j] != s2[j]) {
-                  s1EstaNaOrdem = true;
-                }
-                if (s2[j] != s3[j]) {
-                  s3EstaNaOrdem = true;
-                }
-              }
 
-            //TODO: Abaixo eh considerando que existe no max um alfabeticamente consecutivo dentro dos elementos de [novosFiisApenasDoRodrigo] no universo [novosFiisApenasDoRodrigo+arrayMeu]
-              if (retorno) {
-              arrayNovoMeu.push("(-)");
-              k = k + 1;
 
-              kTeste = 0;
-              str1Teste = novosFiisApenasDoRodrigo[(k-1)+kTeste];
-              for (var iTeste = (i+1); iTeste < (arrayMeu.length); iTeste++) {
-                if ((k + kTeste)<novosFiisApenasDoRodrigo.length) {
-                  str2Teste = novosFiisApenasDoRodrigo[(k + kTeste)];
-                  str3Teste = arrayMeu[iTeste];
 
-                  s1Teste=str1Teste.toLowerCase().split("");
-                    s2Teste=str2Teste.toLowerCase().split("");
-                    s3Teste=str3Teste.toLowerCase().split("");
-                    var min = 4;//Math.min(...[s1.length, s2.length, s3.length]);
+                // Obter todos os links da página
+                var array = rodrigoCarteria.split(" ");
+                var arrayMeu = minhaCarteria.split(" ");
 
-                    var s1EstaNaOrdemTeste = false;
-                    var s3EstaNaOrdemTeste = false;
-                    var retornoTeste = true;
-                    for(var jTeste=0; jTeste<min; jTeste++) {
-                      if (s1EstaNaOrdemTeste && s3EstaNaOrdemTeste) {
-                        retornoTeste = true;
-                        break;
-                      }
-                        if ((s1Teste[jTeste] > s2Teste[jTeste]) && !s1EstaNaOrdemTeste) {
-                        retornoTeste = false;
-                        break;
-                      }
-                      if ((s2Teste[jTeste] > s3Teste[jTeste]) && !s3EstaNaOrdemTeste) {
-                        retornoTeste = false;
-                        break;
-                      }
-                      if (s1Teste[jTeste] != s2Teste[jTeste]) {
-                        s1EstaNaOrdemTeste = true;
-                      }
-                      if (s2Teste[jTeste] != s3Teste[jTeste]) {
-                        s3EstaNaOrdemTeste = true;
-                      }
+                // initialize arraysRodrigo
+                var arrFundo = [];
+                var arrRepresentatividade = [];
+                var arrStatus = [];
+                // append new value to the arraysRodrigo
+
+
+                for (let element of array) {
+                    if (element.endsWith("11") && element.length == 6) {
+                        arrFundo.push(element);
+                        //console.log(element);
+                    } else if (element == "Compra" || element == "Venda" || element == "Manutenção") {
+                        if (element == "Manutenção") {
+                            arrStatus.push("Manutencao");
+                        } else {
+                            arrStatus.push(element);
+                        }
+                        //console.log(element);
+                    } else if (element.endsWith("%") && element.length <= 6) {
+                        arrRepresentatividade.push(element);
                     }
-                  if (!retornoTeste) {
-                    break;
-                  }
-                  kTeste = kTeste + 1;
-                  str1Teste = novosFiisApenasDoRodrigo[(k-1)+kTeste];
                 }
-              }
-              if (kTeste>0) {
-                for(var j=0; j<kTeste; j++) {
-                  //TODO: Faz os tratamentos de adicao dos demais Fiis consecutivo
-                  arrayNovoMeu.push("(-)");
+                var arr = [];
+                var montadorDeLinha = "";
+                for (var i = 0; i < arrFundo.length; i++) {
+                    montadorDeLinha += arrFundo[i];
+                    montadorDeLinha += ";";
+                    montadorDeLinha += arrStatus[i];
+                    montadorDeLinha += ";";
+                    montadorDeLinha += arrRepresentatividade[i].replace(",", ".");
+                    arr.push(montadorDeLinha);
+                    montadorDeLinha = "";
                 }
-                k = k + kTeste;
-                kTeste = 0;
-              }
-              }
-          }
-            arrayNovoMeu.push(arrayMeu[i]);
-          str1 = arrayMeu[i];
-        }
+                var arrayRodrigo = arr.sort();
+                //console.log(arr);
+                // Chamar preenchimento para concluir
+                //completion(arrayRodrigo.join("\r\n"));
 
-        for (var i = k; i < novosFiisApenasDoRodrigo.length; i++) {
-          arrayNovoMeu.push(novosFiisApenasDoRodrigo[k]);
-        }
-        arrayMeu = arrayNovoMeu;
 
-      //Rodrigo Vendeu mais fundos do que Comprou ->   V > C
-      } else {
+                if (arrayMeu.length != 0) {
+                    //Verificacao se sao do mesmo tamanho
+                    var carteirasSaoMesmoTamanho = (arrayRodrigo.length) == (arrayMeu.length);
 
-        var arrayNovoRodrigo = [];
-        var iTeste = 0;
-        for (var i = 0; i < arrayMeu.length; i++) {
-          if ((arrayMeu[i] != "(-)") && (i<arrayRodrigo.length))  {
+                    //Verificacao se sao identicas
+                    var carteirasSaoIdenticas = false;
+                    if (carteirasSaoMesmoTamanho) {
+                        carteirasSaoIdenticas = true;
+                        for (var i = 0; i < arrayRodrigo.length; i++) {
+                            if ((arrayRodrigo[i].split(";")[0]) != arrayMeu[i]) {
+                                carteirasSaoIdenticas = false;
+                                break;
+                            }
+                        }
+                    }
 
-            if ((tempArrayRodrigo).find(element => element==(arrayMeu[i]))) {
-              arrayNovoRodrigo.push(arrayRodrigo[i]);
+                    //Criacao de array comparativo com as duas carteiras
+                    var arrayComAsDuasCarteiras = [];
+                    if (!carteirasSaoIdenticas) {
+                        var montadorDeLinha = "";
 
-            } else {
-              iTeste = iTeste+1;
-              while (((i+iTeste) < arrayMeu.length) && !((tempArrayRodrigo).find(element => element==(arrayMeu[(i+iTeste)])))) {
-                iTeste = iTeste+1;
-              }
+                        var tempArrayRodrigo = [];
+                        for (var i = 0; i < arrayRodrigo.length; i++) {
+                            tempArrayRodrigo.push((arrayRodrigo[i].split(";")[0]));
+                        }
 
-              for (var j = 0; j < iTeste; j++) {
-                montadorDeLinha += "(-)";
-                montadorDeLinha += ";";
-                montadorDeLinha += "Venda";
-                montadorDeLinha += ";";
-                montadorDeLinha += "0.00%";
-                arrayNovoRodrigo.push(montadorDeLinha);
-                montadorDeLinha = "";
-              }
-              for (var j = 0; j < iTeste; j++) {
-                arrayNovoRodrigo.push(arrayRodrigo[(i+j)]);
-              }
-              i = i + (iTeste - 1);
-              iTeste = 0;
+                        //Criando arrayComTodosOsFiisOrdenados para ordenacao no final
+                        var arrayComTodosOsFiisOrdenados = [];
+                        for (var i = 0; i < arrayMeu.length; i++) {
+                            arrayComTodosOsFiisOrdenados.push(arrayMeu[i]);
+                        }
+                        for (var i = 0; i < tempArrayRodrigo.length; i++) {
+                            var esseFiiFoiCompradoPelaPrimeiraVez = true;
+                            for (var j = 0; j < arrayComTodosOsFiisOrdenados.length; j++) {
+                                if (tempArrayRodrigo[i] == arrayComTodosOsFiisOrdenados[j]) {
+                                    esseFiiFoiCompradoPelaPrimeiraVez = false;
+                                    break;
+                                }
+                            }
+                            if (esseFiiFoiCompradoPelaPrimeiraVez) {
+                                arrayComTodosOsFiisOrdenados.push((tempArrayRodrigo[i]));
+                            }
+                        }
+                        arrayComTodosOsFiisOrdenados = arrayComTodosOsFiisOrdenados.sort();
+
+
+                        //Rodrigo vendeu e comprou X fundos ->               V = C
+                        if (carteirasSaoMesmoTamanho) {
+
+                            for (var i = 0; i < arrayRodrigo.length; i++) {
+
+                                //Verificacao se eh um fundo que existia e continua na carteira
+                                if (arrayMeu[i] == (arrayRodrigo[i].split(";")[0])) {
+                                    montadorDeLinha += arrayMeu[i];
+                                    montadorDeLinha += ";";
+                                    montadorDeLinha += arrayRodrigo[i];
+                                    arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                    montadorDeLinha = "";
+
+                                } else {
+
+                                    //Verifica se rodrigoVendeuMeuFiiAntigo
+                                    var arrayRodrigoDoArrayMeu = "";
+                                    var rodrigoVendeuMeuFiiAntigo = true;
+                                    for (var j = 0; j < tempArrayRodrigo.length; j++) {
+                                        if (arrayMeu[i] == tempArrayRodrigo[j]) {
+                                            rodrigoVendeuMeuFiiAntigo = false;
+                                            arrayRodrigoDoArrayMeu = arrayRodrigo[j];
+                                            break;
+                                        }
+                                    }
+                                    //Verifica se rodrigoComprouUmNovoFiiPelaPrimeraVez
+                                    var rodrigoComprouUmNovoFiiPelaPrimeraVez = true;
+                                    for (var j = 0; j < arrayMeu.length; j++) {
+                                        if (tempArrayRodrigo[i] == arrayMeu[j]) {
+                                            rodrigoComprouUmNovoFiiPelaPrimeraVez = false;
+                                            break;
+                                        }
+                                    }
+
+
+                                    //Verifica se arrayMeu[i] ja foi inserido no arrayComAsDuasCarteiras
+                                    var meuFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
+                                    for (var j = 0; j < arrayComAsDuasCarteiras.length; j++) {
+                                        if (arrayMeu[i] == (arrayComAsDuasCarteiras[j].split(";")[0]) || arrayMeu[i] == (arrayComAsDuasCarteiras[j].split(";")[1])) {
+                                            meuFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
+                                            break;
+                                        }
+                                    }
+                                    //Verifica se arrayRodrigo[i] ja foi inserido no arrayComAsDuasCarteiras
+                                    var rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = false;
+                                    for (var j = 0; j < arrayComAsDuasCarteiras.length; j++) {
+                                        if (tempArrayRodrigo[i] == (arrayComAsDuasCarteiras[j].split(";")[0]) || tempArrayRodrigo[i] == (arrayComAsDuasCarteiras[j].split(";")[1])) {
+                                            rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras = true;
+                                            break;
+                                        }
+                                    }
+
+
+                                    //Verificacao se rodrigoVendeuMeuFiiAntigo arrayMeu[i] e rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
+                                    if (rodrigoVendeuMeuFiiAntigo && rodrigoComprouUmNovoFiiPelaPrimeraVez) {
+                                        if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += "(-)";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += arrayRodrigo[i];
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+                                        if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += arrayMeu[i];
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "(-)";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "Venda";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "0.00%";
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+                                        //se nao foi isso, mas rodrigoVendeuMeuFiiAntigo arrayMeu[i]
+                                    } else if (rodrigoVendeuMeuFiiAntigo) {
+                                        if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += arrayMeu[i];
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "(-)";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "Venda";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += "0.00%";
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+                                        // Nesse instante !rodrigoComprouUmNovoFiiPelaPrimeraVez , entao
+                                        if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += tempArrayRodrigo[i];
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += arrayRodrigo[i];
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+
+
+                                        //se nao foi isso, entao rodrigoComprouUmNovoFiiPelaPrimeraVez arrayRodrigo[i]
+                                    } else {
+                                        if (!rodrigoFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += "(-)";
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += arrayRodrigo[i];
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+                                        // Nesse instante !rodrigoVendeuMeuFiiAntigo , entao
+                                        if (!meuFiiFoiInseridoNoArrayComAsDuasCarteiras) {
+                                            montadorDeLinha += arrayMeu[i];
+                                            montadorDeLinha += ";";
+                                            montadorDeLinha += arrayRodrigoDoArrayMeu;
+                                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                            montadorDeLinha = "";
+                                        }
+
+                                    }
+                                }
+                            }
+
+                        } else {
+                            var rodrigoCarteriaTemFundosAMais = (arrayRodrigo.length) - (arrayMeu.length);
+                            var arrayNovoRodrigo = [];
+
+                            //Rodrigo Vendeu menos fundos do que Comprou ->  V < C
+                            if (rodrigoCarteriaTemFundosAMais > 0) {
+                                var novosFiisApenasDoRodrigo = [];
+                                var arrayNovoMeu = [];
+                                for (var i = 0; i < arrayRodrigo.length; i++) {
+                                    if ((arrayRodrigo[i].split(";")[0]) != "(-)") {
+                                        if ((arrayMeu).find(element => element == (arrayRodrigo[i].split(";")[0]))) {
+                                            //arrayNovoMeu.push(arrayRodrigo[i].split(";")[0])
+                                        } else {
+                                            //arrayNovoMeu.push("(-)");
+                                            novosFiisApenasDoRodrigo.push((arrayRodrigo[i].split(";")[0]));
+                                        }
+                                    }
+                                }
+
+                                //Verificacao se existe algum Fii apenas em arrayMeu que nao esta em arrayNovoMeu
+                                var qtdAntigosFiisApenasMeus = (arrayMeu.length + novosFiisApenasDoRodrigo.length) - arrayRodrigo.length
+                                var antigosFiisApenasMeus = [];
+
+                                if (qtdAntigosFiisApenasMeus > 0) {
+                                    for (var i = 0; i < arrayMeu.length; i++) {
+                                        if (!(tempArrayRodrigo).find(element => element == (arrayMeu[i]))) {
+                                            antigosFiisApenasMeus.push(arrayMeu[i]);
+                                        }
+                                    }
+                                }
+
+                                //Inserir antigosFiisApenasMeus no arrayRodrigo e em seguida dar um sort() nele
+                                for (var i = 0; i < antigosFiisApenasMeus.length; i++) {
+                                    montadorDeLinha += antigosFiisApenasMeus[i];
+                                    montadorDeLinha += ";";
+                                    montadorDeLinha += "Venda";
+                                    montadorDeLinha += ";";
+                                    montadorDeLinha += "0.00%";
+                                    arrayNovoRodrigo.push(montadorDeLinha);
+                                    montadorDeLinha = "";
+                                }
+                                arrayRodrigo.sort()
+
+                                //Ordenacao eh para poder inserir novosFiisApenasDoRodrigo no arrayMeu
+                                novosFiisApenasDoRodrigo = novosFiisApenasDoRodrigo.sort();
+                                var k = 0; //iterador em [novosFiisApenasDoRodrigo]
+                                var str1 = "AAAA11";
+                                var str2 = "";
+                                var str3 = "";
+                                var s1;
+                                var s2;
+                                var s3;
+                                var kTeste = 0;
+                                var str1Teste = "";
+                                var str2Teste = "";
+                                var str3Teste = "";
+                                var s1Teste;
+                                var s2Teste;
+                                var s3Teste;
+                                for (var i = 0; i < (arrayMeu.length); i++) {
+                                    if (k < novosFiisApenasDoRodrigo.length) {
+                                        str2 = novosFiisApenasDoRodrigo[k];
+                                        str3 = arrayMeu[i];
+
+                                        s1 = str1.toLowerCase().split("");
+                                        s2 = str2.toLowerCase().split("");
+                                        s3 = str3.toLowerCase().split("");
+                                        var min = 4; //Math.min(...[s1.length, s2.length, s3.length]);
+
+                                        var s1EstaNaOrdem = false;
+                                        var s3EstaNaOrdem = false;
+                                        var retorno = true;
+                                        for (var j = 0; j < min; j++) {
+                                            if (s1EstaNaOrdem && s3EstaNaOrdem) {
+                                                retorno = true;
+                                                break;
+                                            }
+                                            if ((s1[j] > s2[j]) && !s1EstaNaOrdem) {
+                                                retorno = false;
+                                                break;
+                                            }
+                                            if ((s2[j] > s3[j]) && !s3EstaNaOrdem) {
+                                                retorno = false;
+                                                break;
+                                            }
+                                            if (s1[j] != s2[j]) {
+                                                s1EstaNaOrdem = true;
+                                            }
+                                            if (s2[j] != s3[j]) {
+                                                s3EstaNaOrdem = true;
+                                            }
+                                        }
+
+                                        //TODO: Abaixo eh considerando que existe no max um alfabeticamente consecutivo dentro dos elementos de [novosFiisApenasDoRodrigo] no universo [novosFiisApenasDoRodrigo+arrayMeu]
+                                        if (retorno) {
+                                            arrayNovoMeu.push("(-)");
+                                            k = k + 1;
+
+                                            kTeste = 0;
+                                            str1Teste = novosFiisApenasDoRodrigo[(k - 1) + kTeste];
+                                            for (var iTeste = (i + 1); iTeste < (arrayMeu.length); iTeste++) {
+                                                if ((k + kTeste) < novosFiisApenasDoRodrigo.length) {
+                                                    str2Teste = novosFiisApenasDoRodrigo[(k + kTeste)];
+                                                    str3Teste = arrayMeu[iTeste];
+
+                                                    s1Teste = str1Teste.toLowerCase().split("");
+                                                    s2Teste = str2Teste.toLowerCase().split("");
+                                                    s3Teste = str3Teste.toLowerCase().split("");
+                                                    var min = 4; //Math.min(...[s1.length, s2.length, s3.length]);
+
+                                                    var s1EstaNaOrdemTeste = false;
+                                                    var s3EstaNaOrdemTeste = false;
+                                                    var retornoTeste = true;
+                                                    for (var jTeste = 0; jTeste < min; jTeste++) {
+                                                        if (s1EstaNaOrdemTeste && s3EstaNaOrdemTeste) {
+                                                            retornoTeste = true;
+                                                            break;
+                                                        }
+                                                        if ((s1Teste[jTeste] > s2Teste[jTeste]) && !s1EstaNaOrdemTeste) {
+                                                            retornoTeste = false;
+                                                            break;
+                                                        }
+                                                        if ((s2Teste[jTeste] > s3Teste[jTeste]) && !s3EstaNaOrdemTeste) {
+                                                            retornoTeste = false;
+                                                            break;
+                                                        }
+                                                        if (s1Teste[jTeste] != s2Teste[jTeste]) {
+                                                            s1EstaNaOrdemTeste = true;
+                                                        }
+                                                        if (s2Teste[jTeste] != s3Teste[jTeste]) {
+                                                            s3EstaNaOrdemTeste = true;
+                                                        }
+                                                    }
+                                                    if (!retornoTeste) {
+                                                        break;
+                                                    }
+                                                    kTeste = kTeste + 1;
+                                                    str1Teste = novosFiisApenasDoRodrigo[(k - 1) + kTeste];
+                                                }
+                                            }
+                                            if (kTeste > 0) {
+                                                for (var j = 0; j < kTeste; j++) {
+                                                    //TODO: Faz os tratamentos de adicao dos demais Fiis consecutivo
+                                                    arrayNovoMeu.push("(-)");
+                                                }
+                                                k = k + kTeste;
+                                                kTeste = 0;
+                                            }
+                                        }
+                                    }
+                                    arrayNovoMeu.push(arrayMeu[i]);
+                                    str1 = arrayMeu[i];
+                                }
+
+                                for (var i = k; i < novosFiisApenasDoRodrigo.length; i++) {
+                                    arrayNovoMeu.push(novosFiisApenasDoRodrigo[k]);
+                                }
+                                arrayMeu = arrayNovoMeu;
+
+                                //Rodrigo Vendeu mais fundos do que Comprou ->   V > C
+                            } else {
+
+                                var iTeste = 0;
+                                for (var i = 0; i < arrayMeu.length; i++) {
+                                    if ((arrayMeu[i] != "(-)") && (i < arrayRodrigo.length)) {
+
+                                        if ((tempArrayRodrigo).find(element => element == (arrayMeu[i]))) {
+                                            arrayNovoRodrigo.push(arrayRodrigo[i]);
+
+                                        } else {
+                                            iTeste = iTeste + 1;
+                                            while (((i + iTeste) < arrayMeu.length) && !((tempArrayRodrigo).find(element => element == (arrayMeu[(i + iTeste)])))) {
+                                                iTeste = iTeste + 1;
+                                            }
+
+                                            for (var j = 0; j < iTeste; j++) {
+                                                montadorDeLinha += "(-)";
+                                                montadorDeLinha += ";";
+                                                montadorDeLinha += "Venda";
+                                                montadorDeLinha += ";";
+                                                montadorDeLinha += "0.00%";
+                                                arrayNovoRodrigo.push(montadorDeLinha);
+                                                montadorDeLinha = "";
+                                            }
+                                            for (var j = 0; j < iTeste; j++) {
+                                                arrayNovoRodrigo.push(arrayRodrigo[(i + j)]);
+                                            }
+                                            i = i + (iTeste - 1);
+                                            iTeste = 0;
+                                        }
+                                    }
+                                }
+                                arrayRodrigo = arrayNovoRodrigo;
+
+                            }
+
+                            //Agora que ambos tem a mesma quantidade de elementos basta concatena-los
+                            for (var i = 0; i < arrayRodrigo.length; i++) {
+                                montadorDeLinha += arrayMeu[i];
+                                montadorDeLinha += ";";
+                                montadorDeLinha += arrayRodrigo[i];
+                                arrayComAsDuasCarteiras.push(montadorDeLinha);
+                                montadorDeLinha = "";
+                            }
+                        }
+
+                        arrayRodrigo = [];
+                        for (var i = 0; i < arrayComTodosOsFiisOrdenados.length; i++) {
+                            for (var j = 0; j < arrayComAsDuasCarteiras.length; j++) {
+                                if ((arrayComTodosOsFiisOrdenados[i] == (arrayComAsDuasCarteiras[j].split(";")[0])) || (arrayComTodosOsFiisOrdenados[i] == (arrayComAsDuasCarteiras[j].split(";")[1]))) {
+                                    arrayRodrigo.push(arrayComAsDuasCarteiras[j]);
+                                }
+                            }
+                        }
+
+                    } else {
+                        montadorDeLinha += "CARTEIRAS";
+                        montadorDeLinha += ";";
+                        montadorDeLinha += "IGUAIS";
+                        montadorDeLinha += ";";
+                        montadorDeLinha += "(-)";
+                        montadorDeLinha += ";";
+                        montadorDeLinha += "(-)";
+                        arrayComAsDuasCarteiras.push(montadorDeLinha);
+                        montadorDeLinha = "";
+                        for (var i = 0; i < arrayRodrigo.length; i++) {
+                            montadorDeLinha += arrayMeu[i];
+                            montadorDeLinha += ";";
+                            montadorDeLinha += arrayRodrigo[i];
+                            arrayComAsDuasCarteiras.push(montadorDeLinha);
+                            montadorDeLinha = "";
+                        }
+                        arrayRodrigo = arrayComAsDuasCarteiras;
+                    }
+                }
+
+
+
+                return (arrayRodrigo.join("<br />"));
             }
-          }
-        }
-        arrayRodrigo = arrayNovoRodrigo;
-
-      }
-
-      //Agora que ambos tem a mesma quantidade de elementos basta concatena-los
-      for (var i = 0; i < arrayRodrigo.length; i++) {
-        montadorDeLinha += arrayMeu[i];
-        montadorDeLinha += ";";
-        montadorDeLinha += arrayRodrigo[i];
-        arrayComAsDuasCarteiras.push(montadorDeLinha);
-        montadorDeLinha = "";
-      }
-    }
-
-
-arrayRodrigo = [];
-for (var i = 0; i<arrayComTodosOsFiisOrdenados.length; i++) {
-  for(var j=0; j<arrayComAsDuasCarteiras.length; j++) {
-    if ( (arrayComTodosOsFiisOrdenados[i]==(arrayComAsDuasCarteiras[j].split(";")[0])) || (arrayComTodosOsFiisOrdenados[i]==(arrayComAsDuasCarteiras[j].split(";")[1])) ) {
-      arrayRodrigo.push(arrayComAsDuasCarteiras[j]);
-    }
-  }
-}
-
-} else {
-  montadorDeLinha += "CARTEIRAS";
-  montadorDeLinha += ";";
-  montadorDeLinha += "IGUAIS";
-  montadorDeLinha += ";";
-  montadorDeLinha += "(-)";
-  montadorDeLinha += ";";
-  montadorDeLinha += "(-)";
-  arrayComAsDuasCarteiras.push(montadorDeLinha);
-  montadorDeLinha = "";
-  for (var i = 0; i < arrayRodrigo.length; i++) {
-    montadorDeLinha += arrayMeu[i];
-    montadorDeLinha += ";";
-    montadorDeLinha += arrayRodrigo[i];
-    arrayComAsDuasCarteiras.push(montadorDeLinha);
-    montadorDeLinha = "";
-  }
-  arrayRodrigo = arrayComAsDuasCarteiras;
-
-  }
-}
-  
-
-//console.log(arrayRodrigo.join("\r\n"));
-// Chamar preenchimento para concluir
-//completion(arrayRodrigo.join("\r\n"));
-
-
-
-            return (arrayRodrigo.join("<br />"));
-        }
-
-        document.body.innerHTML = runMyJavaScript();
-    </script>
-</body>
+            
+            document.body.innerHTML = runMyJavaScript();
+                
+        </script>
+    </body>
 </html>
