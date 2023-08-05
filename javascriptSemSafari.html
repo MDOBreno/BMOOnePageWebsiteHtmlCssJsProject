@@ -5,12 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <textarea name="" rows="2" cols="20" id="myClipboardInput" class="textbox">"Área de Transferência"</textarea>
+    
 </head>
 <body>
     <script>
         function runMyJavaScript() {
-            var rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-var minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+
+            var rodrigoCarteria = document.getElementById("myClipboardInput").textContent.replace("\r\n", " ");
+            var minhaCarteria = "Arquivo";
+
+
+    //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
+    // OK Cenario 
+    if (false) {                
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    
+
+    //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
+    // OK Cenario  umParDeFiisDiferentes[BLMR11!=BREN11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  e doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BRE111 BRE211 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    
+
+    //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
+    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    //idem
+    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]
+    } else if (false) {         
+        rodrigoCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+        minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+    }
 
 
 
