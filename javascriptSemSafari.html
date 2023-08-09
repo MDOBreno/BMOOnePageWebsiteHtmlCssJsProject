@@ -14,99 +14,17 @@
     </head>
 <body style="background-color: rgb(53,64,74);">
     <script>
-            function runMyJavaScript() {
+            function runMyJavaScript(debugando, rodrigoTeste, minhaTeste, saidaEsperadaTeste) {
 
                 var rodrigoCarteria = document.getElementById("myClipboardInput").textContent.split("\n").join(" ");
                 var minhaCarteria = "Arquivo";
 
 
-                //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
-                // OK Cenario 
-                if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-
-
-                    //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
-                    // OK Cenario  umParDeFiisDiferentes[BLMR11!=BREN11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  e doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BRE111 BRE211 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-
-
-                    //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
-                    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-                    //idem
-                    // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]
-                } else if (false) {
-                    rodrigoCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
-                    minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
-
-
-                    //Cenario Doido
-                    // [BUG printa ARQ111 e ARQ211 e um monte de BARI11] 
-                } else if (false) {
-                    rodrigoCarteria = "2,32% Manutenção 3,03% Compra 3,51% Compra 3,60% Compra 3,42% Compra 3,30% Compra 3,60% Compra 3,05% Compra 3,60% Compra 3,65% Compra 5,92% Compra 2,60% Compra 4,95% Compra 3,96% Manutenção 2,63% Manutenção 4,46% Compra 3,60% Compra 4,47% Compra 3,39% Compra 3,58% Compra 4,33% Compra 4,31% Compra 5,24% Compra 5,26% Compra 6,57% Compra 1,67% Manutenção 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 10/11/20 21/5/23 22/08/21 16/08/20 25/09/22 19/01/20 12/04/20 23/08/20 21/12/20 08/08/21 24/04/21 20/02/22 14/08/22 06/06/21 19/01/20 20/12/20 08/01/23 23/04/23 01/05/23 19/01/20 05/07/20 19/01/20 14/5/23 24/7/22 19/01/20 LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11";
-                    minhaCarteria = "ARQ111 ARQ211";
+                
+                if(debugando) {
+                    rodrigoCarteria = rodrigoTeste;
+                    minhaCarteria = minhaTeste;
                 }
-                // //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
-                //  doisParesDeFiisUmSequencialOutroPareadoRodrigoPrimeiro
-                //  doisParesDeFiisUmSequencialOutroPareadoEuPrimeiro
-                //  doisFiisNaoPareadosEntrelecadosSequenciaisRodrigoPrimeiro
-                //  doisFiisNaoPareadosEntrelecadosSequenciaisEuPrimeiro
-
-                //  //Geral
-                //      doisFiisNaoPareadosNaoSequenciaisRodrigoPrimeiro
-                //      doisFiisNaoPareadosNaoSequenciaisEuPrimeiro
-
-                // //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
-                //  umParEntrandoEUmFiiSaindoConsecutivosRodrigoPrimeiro
-                //  umParEntrandoEUmFiiSaindoConsecutivosEuPrimeiro
-                //  umFiiEntrandoEUmParSaindoConsecutivosRodrigoPrimeiro
-                //  umFiiEntrandoEUmParSaindoConsecutivosEuPrimeiro
-
-                //  umFiiEntrandoEUmSaindoEUmEntrandoConsecutivosRodrigoPrimeiro
-                //  umFiiEntrandoEUmSaindoEUmEntrandoConsecutivosEuPrimeiro
-                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
-                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoEuPrimeiro
-                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
-                //  umFiiEntrandoEEspacoEUmSaindoEUmEntrandoRodrigoPrimeiro
-                //  umFiiEntrandoEEspacoEUmSaindoEUmEntrandoEuPrimeiro
-
-                //  //  Geral
-                //      umFiiEntrandoEEspacoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
-                //      umFiiEntrandoEEspacoEUmSaindoEEspacoEUmEntrandoEuPrimeiro
-
-
-
 
                 // Obter todos os links da página
                 var array = rodrigoCarteria.split(" ");
@@ -557,11 +475,257 @@
                 }
 
 
+                //console.log(arrayRodrigo.join("\r\n"));
+                if (debugando) {
+                    if (saidaEsperadaTeste == (arrayRodrigo.join(" "))) {
+                        return "SUCESSO";
+                    } else {
+                        return (arrayRodrigo.join(" "));
+                    }
+                } else {
+                    return (arrayRodrigo.join("<br />"));
+                }
+            }
 
-                return (arrayRodrigo.join("<br />"));
+
+            
+            
+            if (true) { //Testes Unitarios
+                var rodrigoCarteria = "";
+                var minhaCarteria = "";
+                var saidaEsperada = "";
+                var resultadoDesseTeste = "";
+                var avisarSucessoParaCadaTeste = true;
+                var sucessoEmTodosOsTestes = true;
+
+
+                // //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
+                // // OK Cenario 
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "CARTEIRAS;IGUAIS;(-);(-) AFHI11;AFHI11;Manutencao;2.31% BARI11;BARI11;Compra;3.07% BLMR11;BLMR11;Compra;3.68% BROF11;BROF11;Manutencao;3.43% BTLG11;BTLG11;Compra;3.47% FIGS11;FIGS11;Compra;3.39% FIIB11;FIIB11;Compra;3.62% GALG11;GALG11;Compra;3.16% HGBS11;HGBS11;Compra;3.57% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;6.07% HGRU11;HGRU11;Compra;2.72% HLOG11;HLOG11;Compra;5.10% HSAF11;HSAF11;Compra;4.28% JSRE11;JSRE11;Manutencao;2.77% KCRE11;KCRE11;Compra;3.10% LGCP11;LGCP11;Compra;3.63% LVBI11;LVBI11;Compra;4.70% MALL11;MALL11;Compra;3.46% PLCR11;PLCR11;Compra;3.63% PQDP11;PQDP11;Compra;4.57% RBRL11;RBRL11;Compra;4.15% RFOF11;RFOF11;Compra;5.02% TRXF11;TRXF11;Compra;5.45% WHGR11;WHGR11;Compra;6.46% XPIN11;XPIN11;Manutencao;1.61%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("carteirasSaoMesmoTamanho e carteirasSaoIdenticas");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+
+                // //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
+                // // OK Cenario  umParDeFiisDiferentes[BLMR11!=BREN11]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BREN11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% BARI11;BARI11;Compra;3.07% (-);BLMR11;Compra;3.68% BREN11;(-);Venda;0.00% BROF11;BROF11;Manutencao;3.43% BTLG11;BTLG11;Compra;3.47% FIIB11;FIIB11;Compra;3.39% GALG11;GALG11;Compra;3.62% HGBS11;HGBS11;Compra;3.16% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;3.57% HGRU11;HGRU11;Compra;6.07% HLOG11;HLOG11;Compra;2.72% HSAF11;HSAF11;Compra;5.10% JSRE11;JSRE11;Compra;4.28% KCRE11;KCRE11;Manutencao;2.77% LGCP11;LGCP11;Compra;3.10% LVBI11;LVBI11;Compra;3.63% MALL11;MALL11;Compra;4.70% PLCR11;PLCR11;Compra;3.46% PQDP11;PQDP11;Compra;3.63% RBRL11;RBRL11;Compra;4.57% RFOF11;RFOF11;Compra;4.15% TRXF11;TRXF11;Compra;5.02% WHGR11;WHGR11;Compra;5.45% XPIN11;XPIN11;Compra;6.46%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("carteirasSaoMesmoTamanho e !carteirasSaoIdenticas");
+                //     console.log("umParDeFiisDiferentes[BLMR11!=BREN11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // //idem
+                // // OK Cenario  doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% BARI11;BARI11;Compra;3.07% BLMR11;BLMR11;Compra;3.68% (-);BREN11;Manutencao;3.43% BROF11;BROF11;Compra;3.47% BTLG11;(-);Venda;0.00% FIIB11;FIIB11;Compra;3.39% GALG11;GALG11;Compra;3.62% HGBS11;HGBS11;Compra;3.16% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;3.57% HGRU11;HGRU11;Compra;6.07% HLOG11;HLOG11;Compra;2.72% HSAF11;HSAF11;Compra;5.10% JSRE11;JSRE11;Compra;4.28% KCRE11;KCRE11;Manutencao;2.77% LGCP11;LGCP11;Compra;3.10% LVBI11;LVBI11;Compra;3.63% MALL11;MALL11;Compra;4.70% PLCR11;PLCR11;Compra;3.46% PQDP11;PQDP11;Compra;3.63% RBRL11;RBRL11;Compra;4.57% RFOF11;RFOF11;Compra;4.15% TRXF11;TRXF11;Compra;5.02% WHGR11;WHGR11;Compra;5.45% XPIN11;XPIN11;Compra;6.46%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("doisFiisNaoPareadosSequenciaisRodrigoPrimeiro[BREN11!=BTLG11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // // OK Cenario  doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BLMR11 BREN11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% BARI11;BARI11;Compra;3.07% BLMR11;BLMR11;Compra;3.68% BREN11;(-);Venda;0.00% BROF11;BROF11;Manutencao;3.43% (-);BTLG11;Compra;3.47% FIIB11;FIIB11;Compra;3.39% GALG11;GALG11;Compra;3.62% HGBS11;HGBS11;Compra;3.16% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;3.57% HGRU11;HGRU11;Compra;6.07% HLOG11;HLOG11;Compra;2.72% HSAF11;HSAF11;Compra;5.10% JSRE11;JSRE11;Compra;4.28% KCRE11;KCRE11;Manutencao;2.77% LGCP11;LGCP11;Compra;3.10% LVBI11;LVBI11;Compra;3.63% MALL11;MALL11;Compra;4.70% PLCR11;PLCR11;Compra;3.46% PQDP11;PQDP11;Compra;3.63% RBRL11;RBRL11;Compra;4.57% RFOF11;RFOF11;Compra;4.15% TRXF11;TRXF11;Compra;5.02% WHGR11;WHGR11;Compra;5.45% XPIN11;XPIN11;Compra;6.46%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("doisFiisNaoPareadosSequenciaisEuPrimeiro[BREN11!=BTLG11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // //idem
+                // // OK Cenario  e doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BRE111 BRE211 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% BARI11;BARI11;Compra;3.07% (-);BLMR11;Compra;3.68% BRE111;(-);Venda;0.00% BRE211;(-);Venda;0.00% (-);BROF11;Manutencao;3.43% FIIB11;FIIB11;Compra;3.47% GALG11;GALG11;Compra;3.39% HGBS11;HGBS11;Compra;3.62% HGFF11;HGFF11;Compra;3.16% HGRE11;HGRE11;Compra;3.57% HGRU11;HGRU11;Compra;3.57% HLOG11;HLOG11;Compra;6.07% HSAF11;HSAF11;Compra;2.72% JSRE11;JSRE11;Compra;5.10% KCRE11;KCRE11;Compra;4.28% LGCP11;LGCP11;Manutencao;2.77% LVBI11;LVBI11;Compra;3.10% MALL11;MALL11;Compra;3.63% PLCR11;PLCR11;Compra;4.70% PQDP11;PQDP11;Compra;3.46% RBRL11;RBRL11;Compra;3.63% RFOF11;RFOF11;Compra;4.57% TRXF11;TRXF11;Compra;4.15% WHGR11;WHGR11;Compra;5.02% XPIN11;XPIN11;Compra;5.45%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("doisParesDeFiisDiferentes[BLMR11!=BRE111]e[BROF11!=BRE211]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+
+
+                // //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
+                // // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% (-);BARI11;Compra;3.07% BLMR11;BLMR11;Compra;3.68% BROF11;BROF11;Manutencao;3.43% BTLG11;BTLG11;Compra;3.47% FIGS11;FIGS11;Compra;3.39% FIIB11;FIIB11;Compra;3.62% GALG11;GALG11;Compra;3.16% HGBS11;HGBS11;Compra;3.57% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;6.07% HGRU11;HGRU11;Compra;2.72% HLOG11;HLOG11;Compra;5.10% HSAF11;HSAF11;Compra;4.28% JSRE11;JSRE11;Manutencao;2.77% KCRE11;KCRE11;Compra;3.10% LGCP11;LGCP11;Compra;3.63% LVBI11;LVBI11;Compra;4.70% MALL11;MALL11;Compra;3.46% PLCR11;PLCR11;Compra;3.63% PQDP11;PQDP11;Compra;4.57% RBRL11;RBRL11;Compra;4.15% RFOF11;RFOF11;Compra;5.02% TRXF11;TRXF11;Compra;5.45% WHGR11;WHGR11;Compra;6.46% XPIN11;XPIN11;Manutencao;1.61%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas");
+                //     console.log("rodrigoCarteriaTemFundosAMais>0 umFiiEntrando[BARI11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // //idem
+                // // OK Cenario  e rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]
+                // rodrigoCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 2,31% 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Manutenção Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Manutencao;2.31% (-);BARI11;Compra;3.07% (-);BLMR11;Compra;3.68% BROF11;BROF11;Manutencao;3.43% BTLG11;BTLG11;Compra;3.47% FIGS11;FIGS11;Compra;3.39% FIIB11;FIIB11;Compra;3.62% GALG11;GALG11;Compra;3.16% HGBS11;HGBS11;Compra;3.57% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;6.07% HGRU11;HGRU11;Compra;2.72% HLOG11;HLOG11;Compra;5.10% HSAF11;HSAF11;Compra;4.28% JSRE11;JSRE11;Manutencao;2.77% KCRE11;KCRE11;Compra;3.10% LGCP11;LGCP11;Compra;3.63% LVBI11;LVBI11;Compra;4.70% MALL11;MALL11;Compra;3.46% PLCR11;PLCR11;Compra;3.63% PQDP11;PQDP11;Compra;4.57% RBRL11;RBRL11;Compra;4.15% RFOF11;RFOF11;Compra;5.02% TRXF11;TRXF11;Compra;5.45% WHGR11;WHGR11;Compra;6.46% XPIN11;XPIN11;Manutencao;1.61%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("rodrigoCarteriaTemFundosAMais>0 e doisFiisConsecutivosEntrando[BARI11 e BLMR11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // //idem
+                // // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]
+                // rodrigoCarteria = "AFHI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Compra;3.07% BARI11;(-);Venda;0.00% BLMR11;BLMR11;Compra;3.68% BROF11;BROF11;Manutencao;3.43% BTLG11;BTLG11;Compra;3.47% FIGS11;FIGS11;Compra;3.39% FIIB11;FIIB11;Compra;3.62% GALG11;GALG11;Compra;3.16% HGBS11;HGBS11;Compra;3.57% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;6.07% HGRU11;HGRU11;Compra;2.72% HLOG11;HLOG11;Compra;5.10% HSAF11;HSAF11;Compra;4.28% JSRE11;JSRE11;Manutencao;2.77% KCRE11;KCRE11;Compra;3.10% LGCP11;LGCP11;Compra;3.63% LVBI11;LVBI11;Compra;4.70% MALL11;MALL11;Compra;3.46% PLCR11;PLCR11;Compra;3.63% PQDP11;PQDP11;Compra;4.57% RBRL11;RBRL11;Compra;4.15% RFOF11;RFOF11;Compra;5.02% TRXF11;TRXF11;Compra;5.45% WHGR11;WHGR11;Compra;6.46% XPIN11;XPIN11;Manutencao;1.61%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("rodrigoCarteriaTemFundosAMais<0 umFiiSaindo[BARI11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+                // //idem
+                // // OK Cenario  e rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]
+                // rodrigoCarteria = "AFHI11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11 3,07% 3,68% 3,43% 3,47% 3,39% 3,62% 3,16% 3,57% 3,57% 6,07% 2,72% 5,10% 4,28% 2,77% 3,10% 3,63% 4,70% 3,46% 3,63% 4,57% 4,15% 5,02% 5,45% 6,46% 1,61% Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção Compra Compra Compra Compra Compra Compra Compra Compra Compra Compra Manutenção";
+                // minhaCarteria = "AFHI11 BARI11 BLMR11 BROF11 BTLG11 FIGS11 FIIB11 GALG11 HGBS11 HGFF11 HGRE11 HGRU11 HLOG11 HSAF11 JSRE11 KCRE11 LGCP11 LVBI11 MALL11 PLCR11 PQDP11 RBRL11 RFOF11 TRXF11 WHGR11 XPIN11";
+                // saidaEsperada = "AFHI11;AFHI11;Compra;3.07% BARI11;(-);Venda;0.00% BLMR11;(-);Venda;0.00% BROF11;BROF11;Compra;3.68% BTLG11;BTLG11;Manutencao;3.43% FIGS11;FIGS11;Compra;3.47% FIIB11;FIIB11;Compra;3.39% GALG11;GALG11;Compra;3.62% HGBS11;HGBS11;Compra;3.16% HGFF11;HGFF11;Compra;3.57% HGRE11;HGRE11;Compra;3.57% HGRU11;HGRU11;Compra;6.07% HLOG11;HLOG11;Compra;2.72% HSAF11;HSAF11;Compra;5.10% JSRE11;JSRE11;Compra;4.28% KCRE11;KCRE11;Manutencao;2.77% LGCP11;LGCP11;Compra;3.10% LVBI11;LVBI11;Compra;3.63% MALL11;MALL11;Compra;4.70% PLCR11;PLCR11;Compra;3.46% PQDP11;PQDP11;Compra;3.63% RBRL11;RBRL11;Compra;4.57% RFOF11;RFOF11;Compra;4.15% TRXF11;TRXF11;Compra;5.02% WHGR11;WHGR11;Compra;5.45% XPIN11;XPIN11;Compra;6.46%";
+                // resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                // if (avisarSucessoParaCadaTeste) {
+                //     console.log("rodrigoCarteriaTemFundosAMais<0 e doisFiisConsecutivosSaindo[BARI11 e BLMR11]");
+                //     if (resultadoDesseTeste == "SUCESSO") {
+                //         console.log("    SUCESSO Unitario");
+                //     } else {
+                //         console.log("    Falha Unitaria");
+                //         console.log(resultadoDesseTeste);
+                //     }
+                // }
+                // if (resultadoDesseTeste != "SUCESSO") {
+                //     sucessoEmTodosOsTestes = false;
+                // }
+
+
+                //Cenario Doido
+                // [BUG printa ARQ111 e ARQ211 e um monte de BARI11] 
+                rodrigoCarteria = "2,32% Manutenção 3,03% Compra 3,51% Compra 3,60% Compra 3,42% Compra 3,30% Compra 3,60% Compra 3,05% Compra 3,60% Compra 3,65% Compra 5,92% Compra 2,60% Compra 4,95% Compra 3,96% Manutenção 2,63% Manutenção 4,46% Compra 3,60% Compra 4,47% Compra 3,39% Compra 3,58% Compra 4,33% Compra 4,31% Compra 5,24% Compra 5,26% Compra 6,57% Compra 1,67% Manutenção 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 10/11/20 21/5/23 22/08/21 16/08/20 25/09/22 19/01/20 12/04/20 23/08/20 21/12/20 08/08/21 24/04/21 20/02/22 14/08/22 06/06/21 19/01/20 20/12/20 08/01/23 23/04/23 01/05/23 19/01/20 05/07/20 19/01/20 14/5/23 24/7/22 19/01/20 LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11";
+                minhaCarteria = "ARQ111 ARQ211";
+                saidaEsperada = "";
+                resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                if (avisarSucessoParaCadaTeste) {
+                    console.log("Cenario Doido");
+                    console.log("[BUG printa ARQ111 e ARQ211 e um monte de BARI11] ");
+                    if (resultadoDesseTeste == "SUCESSO") {
+                        console.log("    SUCESSO Unitario");
+                    } else {
+                        console.log("    Falha Unitaria");
+                        //console.log(resultadoDesseTeste);
+                    }
+                }
+                if (resultadoDesseTeste != "SUCESSO") {
+                    sucessoEmTodosOsTestes = false;
+                }
+
+
+                // //carteirasSaoMesmoTamanho e !carteirasSaoIdenticas
+                //  doisParesDeFiisUmSequencialOutroPareadoRodrigoPrimeiro
+                //  doisParesDeFiisUmSequencialOutroPareadoEuPrimeiro
+                //  doisFiisNaoPareadosEntrelecadosSequenciaisRodrigoPrimeiro
+                //  doisFiisNaoPareadosEntrelecadosSequenciaisEuPrimeiro
+
+                //  //Geral
+                //      doisFiisNaoPareadosNaoSequenciaisRodrigoPrimeiro
+                //      doisFiisNaoPareadosNaoSequenciaisEuPrimeiro
+
+                // //!carteirasSaoMesmoTamanho logo !carteirasSaoIdenticas
+                //  umParEntrandoEUmFiiSaindoConsecutivosRodrigoPrimeiro
+                //  umParEntrandoEUmFiiSaindoConsecutivosEuPrimeiro
+                //  umFiiEntrandoEUmParSaindoConsecutivosRodrigoPrimeiro
+                //  umFiiEntrandoEUmParSaindoConsecutivosEuPrimeiro
+
+                //  umFiiEntrandoEUmSaindoEUmEntrandoConsecutivosRodrigoPrimeiro
+                //  umFiiEntrandoEUmSaindoEUmEntrandoConsecutivosEuPrimeiro
+                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
+                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoEuPrimeiro
+                //  umFiiEntrandoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
+                //  umFiiEntrandoEEspacoEUmSaindoEUmEntrandoRodrigoPrimeiro
+                //  umFiiEntrandoEEspacoEUmSaindoEUmEntrandoEuPrimeiro
+
+                //  //  Geral
+                //      umFiiEntrandoEEspacoEUmSaindoEEspacoEUmEntrandoRodrigoPrimeiro
+                //      umFiiEntrandoEEspacoEUmSaindoEEspacoEUmEntrandoEuPrimeiro
+
+                if (sucessoEmTodosOsTestes) {
+                    console.log("---------- SUCESSO EM TODOS OS TESTES ----------");
+                } else {
+                    console.log("---------- FALHA em Algum(s) Teste(s) ----------");
+                }
             }
             
-            document.body.innerHTML = runMyJavaScript();
+            
+
+            document.body.innerHTML = runMyJavaScript(false, "", "", "");
                 
         </script>
     </body>
