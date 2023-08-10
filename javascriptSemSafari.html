@@ -66,7 +66,8 @@
                 var arrayRodrigo = arr.sort();
 
 
-                if (arrayMeu.length != 0) {
+                //Verifica se o usuari colocou a propria carteira para fazer um comparativo
+                if (arrayMeu.length > 1) {
                     //Verificacao se sao identicas
                     var carteirasSaoIdenticas = false;
                     if ((arrayRodrigo.length) == (arrayMeu.length)) { //carteirasSaoMesmoTamanho
@@ -208,6 +209,24 @@
                 var avisarSucessoParaCadaTeste = false;
                 var sucessoEmTodosOsTestes = true;
 
+
+                //SemCompararComAMinhaCarteira 
+                rodrigoCarteria = "2,32% Manutenção 3,03% Compra 3,51% Compra 3,60% Compra 3,42% Compra 3,30% Compra 3,60% Compra 3,05% Compra 3,60% Compra 3,65% Compra 5,92% Compra 2,60% Compra 4,95% Compra 3,96% Manutenção 2,63% Manutenção 4,46% Compra 3,60% Compra 4,47% Compra 3,39% Compra 3,58% Compra 4,33% Compra 4,31% Compra 5,24% Compra 5,26% Compra 6,57% Compra 1,67% Manutenção 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 10/11/20 21/5/23 22/08/21 16/08/20 25/09/22 19/01/20 12/04/20 23/08/20 21/12/20 08/08/21 24/04/21 20/02/22 14/08/22 06/06/21 19/01/20 20/12/20 08/01/23 23/04/23 01/05/23 19/01/20 05/07/20 19/01/20 14/5/23 24/7/22 19/01/20 LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK LINK HGRE11 JSRE11 BROF11 BLMR11 RFOF11 HGFF11 FIIB11 XPIN11 BTLG11 HLOG11 LVBI11 GALG11 RBRL11 LGCP11 AFHI11 BARI11 PLCR11 KCRE11 HSAF11 WHGR11 HGRU11 TRXF11 FIGS11 MALL11 HGBS11 PQDP11";
+                minhaCarteria = "";
+                saidaEsperada = "AFHI11;Manutencao;2.63% BARI11;Compra;4.46% BLMR11;Compra;3.60% BROF11;Compra;3.51% BTLG11;Compra;3.60% FIGS11;Compra;5.24% FIIB11;Compra;3.60% GALG11;Compra;2.60% HGBS11;Compra;6.57% HGFF11;Compra;3.30% HGRE11;Manutencao;2.32% HGRU11;Compra;4.33% HLOG11;Compra;3.65% HSAF11;Compra;3.39% JSRE11;Compra;3.03% KCRE11;Compra;4.47% LGCP11;Manutencao;3.96% LVBI11;Compra;5.92% MALL11;Compra;5.26% PLCR11;Compra;3.60% PQDP11;Manutencao;1.67% RBRL11;Compra;4.95% RFOF11;Compra;3.42% TRXF11;Compra;4.31% WHGR11;Compra;3.58% XPIN11;Compra;3.05%";
+                resultadoDesseTeste = runMyJavaScript(true, rodrigoCarteria, minhaCarteria, saidaEsperada);
+                if (avisarSucessoParaCadaTeste) {
+                    console.log("SemCompararComAMinhaCarteira");
+                    if (resultadoDesseTeste == "SUCESSO") {
+                        console.log("    SUCESSO Unitario");
+                    } else {
+                        console.log("    Falha Unitaria");
+                        console.log(resultadoDesseTeste);
+                    }
+                }
+                if (resultadoDesseTeste != "SUCESSO") {
+                    sucessoEmTodosOsTestes = false;
+                }
 
                 //carteirasSaoMesmoTamanho e carteirasSaoIdenticas
                 // OK Cenario 
